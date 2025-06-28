@@ -1,0 +1,54 @@
+<?php
+$orderSuccess = false;
+$orderError = false;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_form'])) {
+    $nom = htmlspecialchars(trim($_POST['nom'] ?? ''));
+    $prenom = htmlspecialchars(trim($_POST['prenom'] ?? ''));
+    $adresse = htmlspecialchars(trim($_POST['adresse'] ?? ''));
+    $code_postal = htmlspecialchars(trim($_POST['code_postal'] ?? ''));
+    $ville = htmlspecialchars(trim($_POST['ville'] ?? ''));
+    $email = htmlspecialchars(trim($_POST['email'] ?? ''));
+    $telephone = htmlspecialchars(trim($_POST['telephone'] ?? ''));
+    $quantite = intval($_POST['quantite'] ?? 1);
+    
+    if (!empty($nom) && !empty($prenom) && !empty($adresse) && !empty($code_postal) && !empty($ville) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $to = 'nat.bissey@andrewmorrowdetective.com';
+        $subject = 'Nouvelle commande BD "Vol de la Palme d\'Or"';
+        
+        $message = "Bonjour,\n\n";
+        $message .= "Nouvelle commande reÃ§ue :\n\n";
+        $message .= "PRODUIT : Edition Papier - BD + Coloriage Flipbook (12â‚¬)\n";
+        $message .= "QUANTITÃ‰ : " . $quantite . "\n\n";
+        $message .= "CLIENT :\n";
+        $message .= "Nom : " . $nom . " " . $prenom . "\n";
+        $message .= "Email : " . $email . "\n";
+        if (!empty($telephone)) {
+            $message .= "TÃ©lÃ©phone : " . $telephone . "\n";
+        }
+        $message .= "\nADRESSE DE LIVRAISON :\n";
+        $message .= $adresse . "\n";
+        $message .= $code_postal . " " . $ville . "\n\n";
+        $message .= "Merci de confirmer la commande au client.\n\n";
+        $message .= "Andrew Morrow Detective - SystÃ¨me de commande automatique";
+        
+        $headers = "From: noreply@andrewmorrowdetective.com\r\n";
+        $headers .= "Reply-To: " . $email . "\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+        
+        if (mail($to, $subject, $message, $headers)) {
+            // Redirection avec paramÃ¨tre de succÃ¨s
+            header('Location: index.php?order=success');
+            exit;
+        } else {
+            // Redirection avec paramÃ¨tre d'erreur
+            header('Location: index.php?order=error');
+            exit;
+        }
+    } else {
+        // Redirection avec paramÃ¨tre d'erreur
+        header('Location: index.php?order=error');
+        exit;
+    }
+}
+?>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Morrow Detective - Vol de la Palme d'Or</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Chiller';
+            src: url('https://db.onlinewebfonts.com/t/3ebed1e55744ef83164b2e63b46ad1a2.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #0d3f6b url('https://andrewmorrowdetective.com/image/texture-fibres.png') repeat;
+            color: #f5f5dc;
+            font-family: 'Playfair Display', serif;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+        
+        /* Zone A - Navigation */
+        .zone-a {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            background: transparent;
+            border: 2px solid #d4af37;
+            border-radius: 6px;
+            color: #d4af37;
+            padding: 10px 20px;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.2));
+            box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 20px;
+        }
+        
+        /* Mystère 1 - Côté Gauche */
+        .left-column {
+            grid-column: 1 / 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .zone-b1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .zone-c1 {
+            flex-grow: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            min-height: 400px;
+        }
+        
+        /* Mystères 2 et 3 - Côté Droit */
+        .right-column {
+            grid-column: 2 / 3;
+            display: grid;
+            grid-template-rows: auto 1fr auto 1fr;
+            gap: 20px;
+        }
+        
+        .zone-b2, .zone-b3, .zone-d {
+            text-align: center;
+            padding: 15px 0;
+        }
+        
+        .zone-c2, .zone-c3, .zone-e {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            min-height: 250px;
+        }
+        
+        /* Footer */
+        .zone-f {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            margin-top: 20px;
+        }
+        
+        /* Titles */
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            color: #d4af37;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        .chiller {
+            font-family: 'Chiller', cursive;
+            letter-spacing: 1px;
+        }
+        
+        /* Media Blocks */
+        .media-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s;
+        }
+        
+        .media-block.active {
+            opacity: 1;
+        }
+        
+        .media-block img,
+        .media-block video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            max-height: 100%;
+        }
+        
+        /* Comments */
+        .comment-block {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.7);
+            padding: 15px;
+            opacity: 0;
+            transition: opacity 0.6s;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .comment-block.active {
+            opacity: 1;
+        }
+        
+        /* Footer Contents */
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-col ul li a {
+            color: #f5f5dc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: #d4af37;
+        }
+        
+        /* Narrative Block */
+        .narrative {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 991px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .left-column, .right-column {
+                grid-column: 1 / -1;
+            }
+            
+            .zone-f {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .zone-f {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Zone A - Navigation -->
+        <div class="zone-a" id="zone-a">
+            <div class="nav-buttons">
+                <a href="#mysteres" class="nav-button">Mystères</a>
+                <a href="#flipbook" class="nav-button">Flipbook</a>
+                <a href="#achat" class="nav-button">Achat</a>
+                <a href="#auteur" class="nav-button">Auteur</a>
+                <a href="#contact" class="nav-button">Contact</a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <!-- Left Column - Mystère 1 -->
+            <div class="left-column">
+                <!-- Zone B1 - Title -->
+                <div class="zone-b1" id="zone-b1">
+                    <h2>LES MYSTÈRES DE LA CÔTE D'AZUR</h2>
+                </div>
+                
+                <!-- Zone C1 - Images -->
+                <div class="zone-c1" id="zone-c1">
+                    <div class="media-block active">
+                        <img src="https://andrewmorrowdetective.com/image/M1P1.jpeg" alt="Mystère de la Côte d'Azur 1">
+                    </div>
+                    <div class="media-block">
+                        <img src="https://andrewmorrowdetective.com/image/M1P2.jpg" alt="Mystère de la Côte d'Azur 2">
+                    </div>
+                    <div class="media-block">
+                        <img src="https://andrewmorrowdetective.com/image/M1P3.jpg" alt="Mystère de la Côte d'Azur 3">
+                    </div>
+                    <div class="media-block">
+                        <img src="https://andrewmorrowdetective.com/image/M1P4.jpg" alt="Mystère de la Côte d'Azur 4">
+                    </div>
+                    <div class="media-block">
+                        <img src="https://andrewmorrowdetective.com/image/M1P5.jpg" alt="Mystère de la Côte d'Azur 5">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Mystères 2 and 3 -->
+            <div class="right-column">
+                <!-- Zone B2 - Title -->
+                <div class="zone-b2" id="zone-b2">
+                    <h2>LES MYSTÈRES D'<span class="chiller">ANDREW MORROW</span></h2>
+                </div>
+                
+                <!-- Zone C2 - Videos -->
+                <div class="zone-c2" id="zone-c2">
+                    <div class="media-block active">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://andrewmorrowdetective.com/video/M2V1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="media-block">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://andrewmorrowdetective.com/video/M2V2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="media-block">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://andrewmorrowdetective.com/video/M2V3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="media-block">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://andrewmorrowdetective.com/video/M2V4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="media-block">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://andrewmorrowdetective.com/video/M2V5.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    
+                    <div class="comment-block active">
+                        "Il parle peu. Il voit tout."
+                    </div>
+                    <div class="comment-block">
+                        "Il intervient quand la police ne peut pas. Ou ne doit pas."
+                    </div>
+                    <div class="comment-block">
+                        "Rien n'est certain. Mais tout le monde sait qu'il n'échoue jamais."
+                    </div>
+                    <div class="comment-block">
+                        "Il ne cherche pas la vérité. Il cherche ce que vous n'osez pas dire."
+                    </div>
+                    <div class="comment-block">
+                        "Il est efficace et rapide."
+                    </div>
+                </div>
+                
+                <!-- Zone B3 - Title -->
+                <div class="zone-b3" id="zone-b3">
+                    <h2>LES MYSTÈRES DU TAPIS ROUGE</h2>
+                </div>
+                
+                <!-- Zone C3 - Images -->
+                <div class="zone-c3" id="zone-c3">
+                    <div class="media-block active">
+                        <img src="https://andrewmorrowdetective.com/image/M3P1.jpg" alt="Mystère du Tapis Rouge 1">
+                    </div>
+                    <div class="media-block">
+                        <img src="https://andrewmorrowdetective.com/image/M3P2.jpg" alt="Mystère du Tapis Rouge 2">
+                    </div>
+                    <div class="media-block">
+                        <img src="https://andrewmorrowdetective.com/image/M3P3.jpg" alt="Mystère du Tapis Rouge 3">
+                    </div>
+                    <div class="media-block">
+                        <img src="https://andrewmorrowdetective.com/image/M3P4.jpg" alt="Mystère du Tapis Rouge 4">
+                    </div>
+                    <div class="media-block">
+                        <img src="https://andrewmorrowdetective.com/image/M3P5.jpg" alt="Mystère du Tapis Rouge 5">
+                    </div>
+                    
+                    <div class="comment-block active">
+                        "Ce n'est qu'au premier regard que tout semble idyllique sur le tapis rouge du Palais des Festivals."
+                    </div>
+                    <div class="comment-block">
+                        "Majestueusement, il garde le secret des talons noirs…"
+                    </div>
+                    <div class="comment-block">
+                        "…et de cette silhouette évanescente, surgie une nuit de silence sur le tapis rouge désert…"
+                    </div>
+                    <div class="comment-block">
+                        "Avec la Palme d'or… … … disparue !"
+                    </div>
+                    <div class="comment-block">
+                        "Andrew Morrow est déjà en route pour la retrouver… et éviter un scandale."
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Zone D - Title -->
+        <div class="zone-d" id="zone-d">
+            <h2>LE VOL DE LA PALME D'OR</h2>
+        </div>
+        
+        <!-- Zone E - Narrative -->
+        <div class="zone-e" id="zone-e">
+            <div class="narrative">
+                <p>Une Palme d'Or volée.</p>
+                <p>Une actrice déguisée.</p>
+                <p>Une scène effacée des caméras.</p>
+            </div>
+        </div>
+        
+        <!-- Zone F - Footer -->
+        <div class="zone-f" id="zone-f">
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#mysteres">Mystères</a></li>
+                    <li><a href="#flipbook">Flipbook</a></li>
+                    <li><a href="#achat">Achat</a></li>
+                    <li><a href="#auteur">Auteur</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>La Collection</h3>
+                <ul>
+                    <li><a href="#">Vol de la Palme d'Or</a></li>
+                    <li><a href="#">Prochaine enquête</a></li>
+                    <li><a href="#">Édition collector</a></li>
+                    <li><a href="#">Pages à colorier</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>À Propos</h3>
+                <ul>
+                    <li><a href="#">L'auteur</a></li>
+                    <li><a href="#">L'illustrateur</a></li>
+                    <li><a href="#">Prix Écrire Cannes</a></li>
+                    <li><a href="#">Processus créatif</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">NATEY Éditions</a></li>
+                    <li><a href="mailto:nat.bissey@andrewmorrowdetective.com">nat.bissey@andrewmorrowdetective.com</a></li>
+                    <li><a href="#">Presse</a></li>
+                    <li><a href="#">Événements</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousels = ['#zone-c1', '#zone-c2', '#zone-c3'];
+            
+            carousels.forEach(function(carouselId) {
+                const mediaBlocks = document.querySelectorAll(`${carouselId} .media-block`);
+                const commentBlocks = document.querySelectorAll(`${carouselId} .comment-block`);
+                
+                if (mediaBlocks.length === 0) return;
+                
+                let currentIndex = 0;
+                
+                setInterval(function() {
+                    // Hide all media blocks
+                    mediaBlocks.forEach(block => block.classList.remove('active'));
+                    
+                    // If there are comment blocks, hide them too
+                    if (commentBlocks.length > 0) {
+                        commentBlocks.forEach(block => block.classList.remove('active'));
+                    }
+                    
+                    // Increment index
+                    currentIndex = (currentIndex + 1) % mediaBlocks.length;
+                    
+                    // Show current media block
+                    mediaBlocks[currentIndex].classList.add('active');
+                    
+                    // If there are comment blocks, show current one
+                    if (commentBlocks.length > 0 && commentBlocks[currentIndex]) {
+                        commentBlocks[currentIndex].classList.add('active');
+                    }
+                }, 2000); // 2 seconds tempo
+            });
+        });
+    </script>
+</body>
+</html>

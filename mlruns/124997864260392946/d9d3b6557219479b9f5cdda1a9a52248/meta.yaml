@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/admin/NATEY/mlruns/124997864260392946/d9d3b6557219479b9f5cdda1a9a52248/artifacts
+end_time: 1749005213453
+entry_point_name: ''
+experiment_id: '124997864260392946'
+lifecycle_stage: active
+run_id: d9d3b6557219479b9f5cdda1a9a52248
+run_name: luxuriant-grub-936
+run_uuid: d9d3b6557219479b9f5cdda1a9a52248
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749005213393
+status: 3
+tags: []
+user_id: admin

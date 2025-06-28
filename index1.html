@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Morrow Detective - Vol de la Palme d'Or</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Chiller';
+            src: url('https://db.onlinewebfonts.com/t/3edf074533375478e39369eb81848655.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --blue-mediterranean: #0d3f6b;
+            --darker-blue: #093253;
+            --lighter-blue: #1b5384;
+            --gold: #d4af37;
+            --ivory: #f5f5dc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--blue-mediterranean);
+            background-image: 
+                radial-gradient(circle at 50% 50%, var(--darker-blue) 1px, transparent 1px),
+                linear-gradient(45deg, var(--lighter-blue) 1px, transparent 2px);
+            background-size: 8px 8px, 8px 8px;
+            font-family: 'Playfair Display', serif;
+            color: var(--ivory);
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* ZONE A - Navigation */
+        #zone-a {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+        
+        #zone-a nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        #zone-a .nav-button {
+            font-family: 'Cinzel', serif;
+            background-color: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            border-radius: 6px;
+            padding: 10px 20px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        #zone-a .nav-button:hover {
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.2));
+            box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        .grid-container {
+          min-height: 100vh;
+        }
+
+        /* Main Grid Layout */
+        .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Plus fiable que 33%/67% */
+        grid-template-rows: auto auto 1fr auto 1fr auto auto; /* Définit des hauteurs proportionnelles */
+        grid-template-areas:
+            "b1 b2"
+            "b1 c1"
+            "b1 c2"
+            "b1 b3"
+            "b1 c3"
+            "b1 d"
+            "b1 e";
+        gap: 20px;
+        align-items: start; /* Alignement en haut */
+        }
+
+        /* Zone Styling */
+        .zone {
+            margin-bottom: 20px;
+        }
+        
+        .zone-title {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        .andrew-morrow-title {
+            font-family: 'Chiller', cursive;
+            font-size: 36px;
+            letter-spacing: 1px;
+        }
+        
+        /* Zone Placements */
+        #zone-b1 { 
+            grid-area: b1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* === NOUVELLES RÈGLES POUR ALIGNER C1 À GAUCHE DE C2/C3 === */
+            /* Ajustements pour le carrousel vertical C1 */
+        #zone-c1 {
+        height: 100%;
+        align-self: stretch; /* Étire la zone sur toute la hauteur disponible */
+        }
+
+        #zone-c1 .media-block {
+        height: 100%;
+        }
+
+        #carousel-c1 {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        }
+
+        #carousel-c1 .carousel-item {
+            height: 100%;
+            min-height: 300px;
+            scroll-snap-align: start;
+        }
+        /* === FIN DES MODIFICATIONS === */
+
+        #zone-c1 { grid-area: c1; }
+        #zone-b2 { grid-area: b2; }
+        #zone-c2 { grid-area: c2; }
+        #zone-b3 { grid-area: b3; }
+        #zone-c3 { grid-area: c3; }
+        #zone-d { grid-area: d; }
+        #zone-e { grid-area: e; }
+        
+        /* Media Container */
+        .media-block {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s;
+            position: relative;
+        }
+        
+        .media-block:hover {
+            transform: translateY(-4px);
+        }
+        
+        /* Carousel Styling */
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            min-height: 300px;
+        }
+        
+        .carousel-item {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transition: opacity 0.6s ease;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        .carousel-media {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+
+        .carousel-video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .comment-zone {
+            padding: 15px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--ivory);
+            text-align: center;
+            font-size: 16px;
+            min-height: 50px;
+        }
+        
+        /* Narrative Block */
+        .narrative {
+            padding: 20px;
+            color: var(--ivory);
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        #zone-f {
+            width: 100%;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .footer-column h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-column a {
+            color: var(--ivory);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+        
+
+        /* Ajustement vertical pour C1 uniquement */
+        #carousel-c1 {
+            display: flex;
+            flex-direction: column;
+            height: 1000px; /* ou la hauteur totale que vous souhaitez */
+            overflow-y: auto;
+        }
+
+        #carousel-c1 .carousel-item {
+            height: 100%; /* chaque item prend toute la hauteur visible */
+            min-height: 300px; /* hauteur minimum par slide */
+        }
+
+        /* Hamburger Menu for Mobile */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--gold);
+            transition: all 0.3s;
+        }
+        
+        /* Responsive */
+        @media (max-width: 991px) {
+            .grid-container {
+              display: grid;
+              grid-template-columns: 33% 67%;
+              grid-template-areas:
+                "b1 b2"
+                "b1 c1"
+                "b1 c2"
+                "b1 b3"
+                "b1 c3"
+                "b1 d"
+                "b1 e";
+              gap: 20px;
+              min-height: 100vh;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 574px) {
+            #zone-a nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            #zone-a nav.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: flex;
+                margin: 0 auto;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ZONE A: Navigation -->
+        <header id="zone-a">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <button class="nav-button">Mystères</button>
+                <button class="nav-button">Flipbook</button>
+                <button class="nav-button">Achat</button>
+                <button class="nav-button">Auteur</button>
+                <button class="nav-button">Contact</button>
+            </nav>
+        </header>
+
+        <div class="grid-container">
+            <!-- ZONE B1: Title Côte d'Azur -->
+           <section id="zone-b1" class="zone">
+              <h2 class="zone-title">LES MYSTÈRES DE LA CÔTE D'AZUR</h2>
+            </section>
+            
+            <!-- ZONE B2: Title Andrew Morrow -->
+            <section id="zone-b2" class="zone">
+                <h2 class="zone-title"><span class="andrew-morrow-title">Andrew Morrow</span></h2>
+            </section>
+            
+            <!-- ZONE C1: Carousel Images Côte d'Azur -->
+            <section id="zone-c1" class="zone">
+                <div class="media-block">
+                    <div class="carousel" id="carousel-c1">
+                        <!-- Le contenu sera généré par JavaScript -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ZONE C2: Carousel Videos -->
+            <section id="zone-c2" class="zone">
+                <div class="media-block">
+                    <div class="carousel" id="carousel-c2">
+                        <!-- Le contenu sera généré par JavaScript -->
+                    </div>
+                    <div class="comment-zone" id="c2-comment">
+                        Il parle peu. Il voit tout.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ZONE B3: Title Tapis Rouge -->
+            <section id="zone-b3" class="zone">
+                <h2 class="zone-title"></h2>
+            </section>
+            
+            <!-- ZONE C3: Carousel Images Tapis Rouge -->
+            <section id="zone-c3" class="zone">
+                <div class="media-block">
+                    <div class="carousel" id="carousel-c3">
+                        <!-- Le contenu sera généré par JavaScript -->
+                    </div>
+                    <div class="comment-zone" id="c3-comment">
+                        Ce n'est qu'au premier regard que tout semble idyllique sur le tapis rouge du Palais des Festivals.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ZONE D: Title Vol de la Palme -->
+            <section id="zone-d" class="zone">
+                <h2 class="zone-title">Le Vol de la Palme d'Or</h2>
+            </section>
+            
+            <!-- ZONE E: Narrative -->
+            <section id="zone-e" class="zone">
+                <div class="narrative">
+                    <p>Une Palme d'Or volée.<br>
+                    Une actrice déguisée.<br>
+                    Une scène effacée des caméras.</p>
+                </div>
+            </section>
+        </div>
+        
+        <!-- ZONE F: Footer -->
+        <footer id="zone-f">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Mystères</a></li>
+                        <li><a href="#">Flipbook</a></li>
+                        <li><a href="#">Achat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Collection</h4>
+                    <ul>
+                        <li><a href="#">Vol de la Palme d'Or</a></li>
+                        <li><a href="#">Prochaines enquêtes</a></li>
+                        <li><a href="#">Éditions spéciales</a></li>
+                        <li><a href="#">Univers exclusifs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>À Propos</h4>
+                    <ul>
+                        <li><a href="#">L'auteur</a></li>
+                        <li><a href="#">L'illustrateur</a></li>
+                        <li><a href="#">Prix littéraires</a></li>
+                        <li><a href="#">Témoignages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">Éditions NATEY</a></li>
+                        <li><a href="#">Demande presse</a></li>
+                        <li><a href="#">Partenariats</a></li>
+                        <li><a href="#">contact@andrewmorrowdetective.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+      const dataC1 = {
+        images: [
+          "https://andrewmorrowdetective.com/image/M1P1.jpeg",
+          "https://andrewmorrowdetective.com/image/M1P2.jpg",
+          "https://andrewmorrowdetective.com/image/M1P3.jpg",
+          "https://andrewmorrowdetective.com/image/M1P4.jpg"
+        ]
+      };
+
+      const dataC2 = {
+        videos: [
+          "https://andrewmorrowdetective.com/video/M2V1.mp4",
+          "https://andrewmorrowdetective.com/video/M2V2.mp4",
+          "https://andrewmorrowdetective.com/video/M2V3.mp4",
+          "https://andrewmorrowdetective.com/video/M2V4.mp4",
+          "https://andrewmorrowdetective.com/video/M2V5.mp4"
+        ],
+        comments: [
+          "Il parle peu. Il voit tout.",
+          "Il intervient quand la police ne peut pas. Ou ne doit pas.",
+          "Rien n'est certain. Mais tout le monde sait qu'il n'échoue jamais.",
+          "Il ne cherche pas la vérité. Il cherche ce que vous n'osez pas dire.",
+          "Il est efficace et rapide."
+        ]
+      };
+
+      const dataC3 = {
+        images: [
+          "https://andrewmorrowdetective.com/image/M3P1.jpg",
+          "https://andrewmorrowdetective.com/image/M3P2.jpg",
+          "https://andrewmorrowdetective.com/image/M3P3.jpg",
+          "https://andrewmorrowdetective.com/image/M3P4.jpg",
+          "https://andrewmorrowdetective.com/image/M3P5.jpg"
+        ],
+        comments: [
+          "Ce n'est qu'au premier regard que tout semble idyllique sur le tapis rouge du Palais des Festivals.",
+          "Majestueusement, il garde le secret des talons noirs…",
+          "…et de cette silhouette évanescente, surgie une nuit de silence sur le tapis rouge désert…",
+          "Avec la Palme d'or… … … disparue !",
+          "Andrew Morrow est déjà en route pour la retrouver… et éviter un scandale."
+        ]
+      };
+
+      function setupCarousel(containerId, sources, isVideo = false) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        sources.forEach((src, i) => {
+          const div = document.createElement("div");
+          div.className = "carousel-item" + (i === 0 ? " active" : "");
+          const media = document.createElement(isVideo ? "video" : "img");
+          media.className = "carousel-media";
+          if (isVideo) {
+            media.src = src;
+            media.autoplay = true;
+            media.muted = true;
+            media.loop = true;
+            media.playsInline = true;
+          } else {
+            media.src = src;
+            media.alt = "slide";
+          }
+
+          media.onerror = () => div.remove();
+
+          div.appendChild(media);
+          container.appendChild(div);
+        });
+      }
+
+      function cycleCarousel(containerId, commentId, comments) {
+        let index = 0;
+        const interval = setInterval(() => {
+            const items = document.querySelectorAll(`#${containerId} .carousel-item`);
+            if (!items.length) {
+                clearInterval(interval);
+                return;
+            }
+
+            items.forEach(item => item.classList.remove("active"));
+            
+            if (items[index]) {
+                items[index].classList.add("active");
+                
+                if (commentId && comments && comments[index]) {
+                    const comment = document.getElementById(commentId);
+                    if (comment) comment.textContent = comments[index];
+                }
+            }
+
+            index = (index + 1) % items.length;
+        }, 2000);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Configuration des carousels
+        setupCarousel("carousel-c1", dataC1.images);
+        setupCarousel("carousel-c2", dataC2.videos, true);
+        setupCarousel("carousel-c3", dataC3.images);
+        
+        // Démarrage des cycles
+        cycleCarousel("carousel-c1");
+        cycleCarousel("carousel-c2", "c2-comment", dataC2.comments);
+        cycleCarousel("carousel-c3", "c3-comment", dataC3.comments);
+        
+        // Menu mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        }
+      });
+    </script>
+</body>
+</html>
