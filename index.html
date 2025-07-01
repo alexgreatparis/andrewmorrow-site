@@ -6,15 +6,15 @@
     
     <!-- SEO Meta Tags -->
     <title>Andrew Morrow Detective - BD Mystère Côte d'Azur | Vol de la Palme d'Or</title>
-    <meta name="description" content="Découvrez Andrew Morrow, détective sur la Côte d'Azur. BD policière + coloriage flipbook. Enquêtes à Cannes, mystères et élégance française. Prix littéraire 2024.">
-    <meta name="keywords" content="Andrew Morrow, détective, BD policière, Côte d'Azur, Cannes, flipbook, coloriage, mystère français, bande dessinée, prix littéraire">
+    <meta name="description" content="Découvrez Andrew Morrow, détective sur la Côte d'Azur. BD policière + coloriage 2-Faces. Enquêtes à Cannes, mystères et élégance française. Prix littéraire 2024.">
+    <meta name="keywords" content="Andrew Morrow, détective, BD policière, Côte d'Azur, Cannes, 2-Faces, coloriage, mystère français, bande dessinée, prix littéraire">
     <meta name="author" content="Nat Bissey">
     <link rel="canonical" href="https://andrewmorrowdetective.com">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Andrew Morrow Detective - Mystères de la Côte d'Azur">
     <meta property="og:description" content="Plongez dans l'univers du détective Andrew Morrow et ses enquêtes sur la Côte d'Azur">
-    <meta property="og:image" content="https://andrewmorrowdetective.com/image/M1P1.jpeg">
+    <meta property="og:image" content="images/1M1.png">
     <meta property="og:url" content="https://andrewmorrowdetective.com">
     <meta property="og:type" content="website">
     
@@ -23,885 +23,925 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     
+    <!-- Styles de transition pour les thèmes -->
+    <!-- SUPPRIMER tout ce qui concerne les transitions de thème -->
+    <link rel="stylesheet" href="themes/vip.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap?v=2.8.001" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-        body {
-            background: #0d3f6b url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGklEQVQYV2NkYGBgYBwVQBUwDgugCgadAAYGAAAaAALmrnr3AAAAAElFTkSuQmCC') repeat;
-            color: #f5f5dc;
-            font-family: 'Playfair Display', serif;
-            overflow-x: hidden;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        /* Zone A - Navigation Ultra-Chic */
-        #zone-a {
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-        }
+    body {
+        background: #0d3f6b url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGklEQVQYV2NkYGBgYBwVQBUwDgugCgadAAYGAAAaAALmrnr3AAAAAElFTkSuQmCC') repeat;
+        color: #f5f5dc;
+        font-family: 'Playfair Display', serif;
+        overflow-x: hidden;
+    }
 
-        .navigation {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+    /* Zone A - Navigation Ultra-Chic */
+    #zone-a {
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
 
-        .nav-button {
-            background: transparent;
-            border: 2px solid #d4af37;
-            color: #d4af37;
-            font-family: 'Cinzel', serif;
-            font-size: 16px;
-            padding: 20px 15px;
-            border-radius: 8px;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            text-transform: uppercase;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 2px 8px rgba(212, 175, 55, 0.2),
-                inset 0 1px 0 rgba(212, 175, 55, 0.1);
-            transform: perspective(1000px) rotateX(0deg);
-            backdrop-filter: blur(2px);
-        }
+    .navigation {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
 
-        .nav-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, 
-                rgba(212, 175, 55, 0.1) 0%,
-                rgba(240, 216, 88, 0.2) 50%,
-                rgba(255, 235, 120, 0.3) 100%);
-            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: -1;
-        }
+    .nav-button {
+        background: transparent;
+        border: 2px solid #d4af37;
+        color: #d4af37;
+        font-family: 'Cinzel', serif;
+        font-size: 16px;
+        padding: 20px 15px;
+        border-radius: 8px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 
+            0 2px 8px rgba(212, 175, 55, 0.2),
+            inset 0 1px 0 rgba(212, 175, 55, 0.1);
+        transform: perspective(1000px) rotateX(0deg);
+        backdrop-filter: blur(2px);
+    }
 
-        .nav-button::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
-            transform: translate(-50%, -50%);
-            transition: all 0.3s ease;
-            border-radius: 50%;
-            z-index: -1;
-        }
+    .nav-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, 
+            rgba(212, 175, 55, 0.1) 0%,
+            rgba(240, 216, 88, 0.2) 50%,
+            rgba(255, 235, 120, 0.3) 100%);
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: -1;
+    }
 
-        .nav-button:hover::before, .nav-button.active::before {
-            left: 0;
-        }
+    .nav-button::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+        border-radius: 50%;
+        z-index: -1;
+    }
 
-        .nav-button:hover::after {
-            width: 100px;
-            height: 100px;
-        }
+    .nav-button:hover::before, .nav-button.active::before {
+        left: 0;
+    }
 
-        .nav-button:hover, .nav-button.active {
-            background: linear-gradient(135deg, #d4af37 0%, #f0d858 50%, #d4af37 100%);
-            color: #0d3f6b;
-            box-shadow: 
-                0 0 20px rgba(212, 175, 55, 0.7),
-                0 8px 25px rgba(0,0,0,0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3),
-                inset 0 -1px 0 rgba(0, 0, 0, 0.2);
-            transform: translateY(-3px) scale(1.05) perspective(1000px) rotateX(5deg);
-            border-color: #f0d858;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-        }
+    .nav-button:hover::after {
+        width: 100px;
+        height: 100px;
+    }
 
-        .nav-button:active {
-            transform: translateY(-1px) scale(1.02);
-            transition: all 0.1s ease;
-        }
+    .nav-button:hover, .nav-button.active {
+        background: linear-gradient(135deg, #d4af37 0%, #f0d858 50%, #d4af37 100%);
+        color: #0d3f6b;
+        box-shadow: 
+            0 0 20px rgba(212, 175, 55, 0.7),
+            0 8px 25px rgba(0,0,0,0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3),
+            inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+        transform: translateY(-3px) scale(1.05) perspective(1000px) rotateX(5deg);
+        border-color: #f0d858;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
 
-        /* Main Content Container */
-        .main-container {
-            display: grid;
-            grid-template-columns: 40% 60%;
-            min-height: calc(100vh - 140px);
-            gap: 20px;
-            padding: 0 20px;
-        }
+    .nav-button:active {
+        transform: translateY(-1px) scale(1.02);
+        transition: all 0.1s ease;
+    }
 
-        /* Left Column */
-        .left-column {
-            display: flex;
+    /* Main Content Container */
+    .main-container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        min-height: calc(100vh - 140px);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    /* Left Column */
+    .left-column {
+        display: grid;
+        grid-template-rows: auto 2fr;
+        gap: 20px;
+    }
+
+    #zone-b1 {
+        text-align: center;
+        padding: 30px 20px;
+        background: rgba(13, 63, 107, 0.3);
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    #zone-b1 h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 2em;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    .mystery-description {
+        margin-top: 15px;
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #f5f5dc;
+        font-style: italic;
+    }
+
+    #zone-c1 {
+        height: 600px;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.30);
+    }
+
+    /* Right Column */
+    .right-column {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto;
+        gap: 20px;
+    }
+
+    #zone-b2 {
+        text-align: center;
+        padding: 30px 20px;
+        background: rgba(13, 63, 107, 0.3);
+        border-radius: 12px;
+    }
+
+    #zone-b2 h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 2em;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    .andrew-name {
+        font-family: 'Creepster', cursive !important;
+    }
+
+    #zone-c2 {
+        position: relative;
+        height: 400px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.30);
+    }
+
+    #zone-b3 {
+        text-align: center;
+        padding: 30px 20px;
+        background: rgba(13, 63, 107, 0.3);
+        border-radius: 12px;
+    }
+
+    #zone-b3 h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 2em;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    #zone-c3 {
+        position: relative;
+        height: 400px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.30);
+    }
+
+    #zone-d {
+        text-align: center;
+        padding: 30px 20px;
+        background: rgba(13, 63, 107, 0.3);
+        border-radius: 12px;
+    }
+
+    #zone-d h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 2em;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    #zone-e {
+        padding: 30px;
+        text-align: center;
+        background: rgba(13, 63, 107, 0.3);
+        border-radius: 12px;
+    }
+
+    #zone-e p {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #f5f5dc;
+        font-style: italic;
+    }
+
+    /* Media blocks */
+    .media-block {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .media-block:hover {
+        transform: translateY(-4px);
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 600ms ease-in-out;
+    }
+
+    .carousel-item.active {
+        opacity: 1;
+    }
+
+    .carousel-item img, .carousel-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-height: 100%;
+    }
+
+    .comment-zone {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: rgba(13, 63, 107, 0.8);
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .comment-zone p {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: #f5f5dc;
+        font-size: 1.1em;
+        line-height: 1.4;
+    }
+
+    /* Order Form Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+        background: linear-gradient(135deg, #0d3f6b, #1a4f7a);
+        margin: 5% auto;
+        padding: 40px;
+        border: 2px solid #d4af37;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        position: relative;
+    }
+
+    .close {
+        color: #d4af37;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .close:hover {
+        color: #f0d858;
+    }
+
+    .order-form h2 {
+        font-family: 'Cinzel', serif;
+        color: #d4af37;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        color: #d4af37;
+        margin-bottom: 8px;
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+    }
+
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #d4af37;
+        border-radius: 8px;
+        background: rgba(245, 245, 220, 0.1);
+        color: #f5f5dc;
+        font-family: 'Playfair Display', serif;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .form-group input:focus, .form-group select:focus {
+        outline: none;
+        border-color: #f0d858;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        background: rgba(245, 245, 220, 0.15);
+    }
+
+    .form-group input.error {
+        border-color: #ff6b6b !important;
+    }
+
+    .form-group input::placeholder {
+        color: rgba(245, 245, 220, 0.6);
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .submit-btn {
+        background: linear-gradient(135deg, #d4af37, #f0d858);
+        color: #0d3f6b;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .submit-btn:hover {
+        background: linear-gradient(135deg, #f0d858, #d4af37);
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .submit-btn:active {
+        transform: translateY(0);
+    }
+
+    .submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    /* Success Notification */
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #d4af37, #f0d858);
+        color: #0d3f6b;
+        padding: 20px 30px;
+        border-radius: 10px;
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+        z-index: 1001;
+        transform: translateX(400px);
+        transition: transform 0.5s ease;
+        max-width: 400px;
+    }
+
+    .notification.show {
+        transform: translateX(0);
+    }
+
+    /* Suite du CSS à restaurer dans la prochaine tranche... */
+
+    /* Responsive design */
+    @media (max-width: 992px) {
+        .achat-section {
             flex-direction: column;
+            align-items: center;
         }
 
-        #zone-b1 {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(13, 63, 107, 0.3);
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        #zone-b1 h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 2em;
-            color: #d4af37;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-
-        .mystery-description {
-            margin-top: 15px;
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #f5f5dc;
-            font-style: italic;
-        }
-
-        #zone-c1 {
-            flex: 1;
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.30);
-        }
-
-        /* Right Column */
-        .right-column {
-            display: grid;
-            grid-template-rows: auto auto auto auto auto;
-            gap: 20px;
-        }
-
-        #zone-b2 {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(13, 63, 107, 0.3);
-            border-radius: 12px;
-        }
-
-        #zone-b2 h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 2em;
-            color: #d4af37;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-
-        .andrew-name {
-            font-family: 'Creepster', cursive !important;
-        }
-
-        #zone-c2 {
-            position: relative;
-            height: 400px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.30);
-        }
-
-        #zone-b3 {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(13, 63, 107, 0.3);
-            border-radius: 12px;
-        }
-
-        #zone-b3 h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 2em;
-            color: #d4af37;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-
-        #zone-c3 {
-            position: relative;
-            height: 400px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.30);
-        }
-
-        #zone-d {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(13, 63, 107, 0.3);
-            border-radius: 12px;
-        }
-
-        #zone-d h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 2em;
-            color: #d4af37;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-
-        #zone-e {
-            padding: 30px;
-            text-align: center;
-            background: rgba(13, 63, 107, 0.3);
-            border-radius: 12px;
-        }
-
-        #zone-e p {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #f5f5dc;
-            font-style: italic;
-        }
-
-        /* Media blocks */
-        .media-block {
+        .achat-box {
             width: 100%;
-            height: 100%;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .media-block:hover {
-            transform: translateY(-4px);
-        }
-
-        .carousel-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 600ms ease-in-out;
-        }
-
-        .carousel-item.active {
-            opacity: 1;
-        }
-
-        .carousel-item img, .carousel-item video {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            max-height: 100%;
-        }
-
-        .comment-zone {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: rgba(13, 63, 107, 0.8);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .comment-zone p {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            color: #f5f5dc;
-            font-size: 1.1em;
-            line-height: 1.4;
-        }
-
-        /* Order Form Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: linear-gradient(135deg, #0d3f6b, #1a4f7a);
-            margin: 5% auto;
-            padding: 40px;
-            border: 2px solid #d4af37;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            position: relative;
-        }
-
-        .close {
-            color: #d4af37;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-
-        .close:hover {
-            color: #f0d858;
-        }
-
-        .order-form h2 {
-            font-family: 'Cinzel', serif;
-            color: #d4af37;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            color: #d4af37;
-            margin-bottom: 8px;
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-        }
-
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #d4af37;
-            border-radius: 8px;
-            background: rgba(245, 245, 220, 0.1);
-            color: #f5f5dc;
-            font-family: 'Playfair Display', serif;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus, .form-group select:focus {
-            outline: none;
-            border-color: #f0d858;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-            background: rgba(245, 245, 220, 0.15);
-        }
-
-        .form-group input.error {
-            border-color: #ff6b6b !important;
-        }
-
-        .form-group input::placeholder {
-            color: rgba(245, 245, 220, 0.6);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #d4af37, #f0d858);
-            color: #0d3f6b;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-            font-size: 18px;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .submit-btn:hover {
-            background: linear-gradient(135deg, #f0d858, #d4af37);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
-        /* Success Notification */
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #d4af37, #f0d858);
-            color: #0d3f6b;
-            padding: 20px 30px;
-            border-radius: 10px;
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
-            z-index: 1001;
-            transform: translateX(400px);
-            transition: transform 0.5s ease;
             max-width: 400px;
         }
+    }
 
-        .notification.show {
-            transform: translateX(0);
+    @media (max-width: 600px) {
+        .cta-button {
+            padding: 12px 24px;
+            font-size: 1em;
         }
 
-        /* Testimonials Section in Achat */
-        .achat-testimonials {
-            background: rgba(13, 63, 107, 0.4);
-            padding: 30px 20px;
-            margin: 30px 0;
-            border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+        .achat-box h3 {
+            font-size: 1.5em;
         }
 
-        .achat-testimonials h3 {
-            font-family: 'Cinzel', serif;
-            color: #d4af37;
-            text-align: center;
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .achat-box p {
+            font-size: 1em;
         }
+    }
 
-        .achat-testimonial-carousel {
-            position: relative;
-            height: 180px;
-            overflow: hidden;
-            background: rgba(26, 26, 26, 0.3);
-            border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
+    .temoignages-section, .testimonial-quote, .temoignages-list, .temoignages-block, .temoignages {
+        font-family: 'Cinzel', serif !important;
+        color: #f8f8f2;
+        font-size: 1.15em;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+    .temoignages-section strong, .testimonial-quote strong, .temoignages-list strong, .temoignages-block strong, .temoignages strong {
+        color: #d4af37;
+        font-weight: 600;
+    }
+    .temoignages-section em, .testimonial-quote em, .temoignages-list em, .temoignages-block em, .temoignages em {
+        color: #f8f8f2;
+        font-style: italic;
+    }
+    .temoignages-section a, .testimonial-quote a, .temoignages-list a, .temoignages-block a, .temoignages a {
+        color: #d4af37;
+        text-decoration: none;
+    }
+    .temoignages-section a:hover, .testimonial-quote a:hover, .temoignages-list a:hover, .temoignages-block a:hover, .temoignages a:hover {
+        text-decoration: underline;
+    }
+    .temoignages-section {
+        margin: 0 auto 32px auto;
+        max-width: 900px;
+        background: rgba(13, 63, 107, 0.3);
+        border-radius: 14px;
+        padding: 32px 24px;
+        box-shadow: 0 4px 24px rgba(13,63,107,0.10);
+    }
+    .temoignages-list {
+        margin-top: 18px;
+    }
+    .temoignages-list p {
+        background: rgba(13, 63, 107, 0.18);
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(13,63,107,0.08);
+        padding: 18px 24px 12px 24px;
+        margin: 0 auto 22px auto;
+        max-width: 700px;
+        font-family: 'Cinzel', serif !important;
+        color: #f8f8f2;
+        font-size: 1.13em;
+        font-style: italic;
+        position: relative;
+    }
+    .temoignages-list p strong {
+        display: block;
+        color: #d4af37;
+        font-weight: 700;
+        font-style: normal;
+        margin-bottom: 6px;
+        font-size: 1.08em;
+    }
 
-        .achat-testimonial-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 600ms ease-in-out;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            text-align: center;
-        }
+    /* Testimonials Section for Achat */
+    .achat-testimonials {
+        background: rgba(13, 63, 107, 0.4);
+        padding: 30px 20px;
+        margin: 30px 0;
+        border-radius: 12px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
 
-        .achat-testimonial-item.active {
-            opacity: 1;
-        }
+    .achat-testimonials h3 {
+        font-family: 'Cinzel', serif;
+        color: #d4af37;
+        text-align: center;
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
 
-        .achat-testimonial-quote {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #f5f5dc;
-            margin-bottom: 15px;
-            max-width: 700px;
-        }
+    .achat-testimonial-carousel {
+        position: relative;
+        height: 180px;
+        overflow: hidden;
+        background: rgba(26, 26, 26, 0.3);
+        border-radius: 12px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
 
-        .achat-testimonial-quote::before {
-            content: '« ';
-            color: #d4af37;
-        }
+    .achat-testimonial-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 600ms ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        text-align: center;
+    }
 
-        .achat-testimonial-quote::after {
-            content: ' »';
-            color: #d4af37;
-        }
+    .achat-testimonial-item.active {
+        opacity: 1;
+    }
 
-        .achat-testimonial-author {
-            font-family: 'Cinzel', serif;
-            color: #d4af37;
-            font-size: 0.9em;
-            letter-spacing: 1px;
-        }
+    .achat-testimonial-quote {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #f5f5dc;
+        margin-bottom: 15px;
+        max-width: 700px;
+    }
 
-        .achat-testimonial-author .profession {
-            font-style: italic;
-            color: #f5f5dc;
-            opacity: 0.8;
-        }
+    .achat-testimonial-quote::before {
+        content: '« ';
+        color: #d4af37;
+    }
 
-        /* Testimonials Section */
-        .testimonials-section {
-            background: rgba(13, 63, 107, 0.4);
-            padding: 30px 20px;
-            margin: 30px 0;
-            border-radius: 12px;
-        }
+    .achat-testimonial-quote::after {
+        content: ' »';
+        color: #d4af37;
+    }
 
-        .testimonials-section h3 {
-            font-family: 'Cinzel', serif;
-            color: #d4af37;
-            text-align: center;
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .achat-testimonial-author {
+        font-family: 'Cinzel', serif;
+        color: #d4af37;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+    }
 
-        .testimonial-carousel {
-            position: relative;
-            height: 180px;
-            overflow: hidden;
-            background: rgba(26, 26, 26, 0.3);
-            border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
+    .achat-testimonial-author .profession {
+        font-style: italic;
+        color: #f5f5dc;
+        opacity: 0.8;
+    }
 
-        .testimonial-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 600ms ease-in-out;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            text-align: center;
-        }
+    /* Testimonials Section */
+    .testimonials-section {
+        background: rgba(13, 63, 107, 0.4);
+        padding: 30px 20px;
+        margin: 30px 0;
+        border-radius: 12px;
+    }
 
-        .testimonial-item.active {
-            opacity: 1;
-        }
+    .testimonials-section h3 {
+        font-family: 'Cinzel', serif;
+        color: #d4af37;
+        text-align: center;
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
 
-        .testimonial-quote {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #f5f5dc;
-            margin-bottom: 15px;
-            max-width: 700px;
-        }
+    .testimonial-carousel {
+        position: relative;
+        height: 180px;
+        overflow: hidden;
+        background: rgba(26, 26, 26, 0.3);
+        border-radius: 12px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
 
-        .testimonial-quote::before {
-            content: '« ';
-            color: #d4af37;
-        }
+    .testimonial-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 600ms ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        text-align: center;
+    }
 
-        .testimonial-quote::after {
-            content: ' »';
-            color: #d4af37;
-        }
+    .testimonial-item.active {
+        opacity: 1;
+    }
 
-        .testimonial-author {
-            font-family: 'Cinzel', serif;
-            color: #d4af37;
-            font-size: 0.9em;
-            letter-spacing: 1px;
-        }
+    .testimonial-quote {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #f5f5dc;
+        margin-bottom: 15px;
+        max-width: 700px;
+    }
 
-        .testimonial-author .profession {
-            font-style: italic;
-            color: #f5f5dc;
-            opacity: 0.8;
-        }
+    .testimonial-quote::before {
+        content: '« ';
+        color: #d4af37;
+    }
 
-        .testimonial-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 20px;
-        }
+    .testimonial-quote::after {
+        content: ' »';
+        color: #d4af37;
+    }
 
-        .indicator {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(212, 175, 55, 0.3);
-            transition: background 0.3s ease;
-        }
+    .testimonial-author {
+        font-family: 'Cinzel', serif;
+        color: #d4af37;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+    }
 
-        .indicator.active {
-            background: #d4af37;
-        }
+    .testimonial-author .profession {
+        font-style: italic;
+        color: #f5f5dc;
+        opacity: 0.8;
+    }
 
-        .testimonial-carousel:hover .testimonial-item {
-            animation-play-state: paused;
-        }
+    .testimonial-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
 
-        /* FAQ Styles */
-        .faq-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+    .indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.3);
+        transition: background 0.3s ease;
+    }
 
-        .faq-category {
-            background: rgba(13, 63, 107, 0.3);
-            border-radius: 12px;
-            margin-bottom: 30px;
-            overflow: hidden;
-        }
+    .indicator.active {
+        background: #d4af37;
+    }
 
-        .faq-category-title {
-            background: rgba(212, 175, 55, 0.2);
-            padding: 20px 30px;
-            font-family: 'Cinzel', serif;
-            font-size: 1.4em;
-            color: #d4af37;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-        }
+    /* CORRECTION COULEUR LIENS FOOTER */
+    .footer-column a:link {
+        color: #f5f5dc !important;
+        text-decoration: none;
+    }
+    .footer-column a:visited {
+        color: #f5f5dc !important;
+        text-decoration: none;
+    }
+    .footer-column a:hover {
+        color: #d4af37 !important;
+        text-decoration: none;
+    }
+    .footer-column a:active {
+        color: #d4af37 !important;
+        text-decoration: none;
+    }
+    .footer-column ul li a {
+        color: #f5f5dc !important;
+        text-decoration: none !important;
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
+    .footer-column ul li a:hover {
+        color: #d4af37 !important;
+    }
 
-        .faq-item {
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-            padding: 25px 30px;
-        }
+    /* NAVIGATION PREMIUM */
+    .navigation, .navigation ul, .navigation li, .navigation a {
+        font-family: 'Cinzel', serif !important;
+        color: #d4af37 !important;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        text-decoration: none !important;
+        font-size: 1.25em;
+        letter-spacing: 1px;
+    }
 
-        .faq-item:last-child {
-            border-bottom: none;
-        }
+    .navigation a:link,
+    .navigation a:visited {
+        color: #d4af37 !important;
+        text-decoration: none !important;
+    }
 
-        .faq-question {
-            font-family: 'Cinzel', serif;
-            color: #d4af37;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
+    .navigation a:hover,
+    .navigation a:active {
+        color: #f0d858 !important;
+        text-decoration: underline !important;
+    }
 
-        .faq-answer {
-            font-family: 'Playfair Display', serif;
-            color: #f5f5dc;
-            line-height: 1.8;
-            font-size: 1.05em;
-        }
+    .navigation h3, .navigation h2, .navigation h1 {
+        color: #fffbe6 !important;
+        font-family: 'Cinzel', serif !important;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
 
-        .faq-answer a {
-            color: #d4af37;
-            text-decoration: none;
-        }
+    /* Footer */
+    #zone-f {
+        width: 100%;
+        padding: 40px 20px;
+        background: rgba(13, 63, 107, 0.6);
+        margin-top: 40px;
+    }
 
-        .faq-answer a:hover {
-            color: #f0d858;
-        }
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        /* Footer */
-        #zone-f {
-            width: 100%;
-            padding: 40px 20px;
-            background: rgba(13, 63, 107, 0.6);
-            margin-top: 40px;
-        }
+    .footer-column h3 {
+        font-family: 'Cinzel', serif;
+        color: #d4af37;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .footer-column ul {
+        list-style: none;
+    }
 
-        .footer-column h3 {
-            font-family: 'Cinzel', serif;
-            color: #d4af37;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
 
-        .footer-column ul {
-            list-style: none;
-        }
+    .footer-column ul li a {
+        color: #d4af37 !important;
+        text-decoration: none !important;
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
 
-        .footer-column ul li {
-            margin-bottom: 8px;
-        }
+    .footer-column ul li a:hover {
+        color: #f0d858 !important;
+    }
 
-        .footer-column ul li a {
-            color: #f5f5dc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            cursor: pointer;
-        }
+    /* Tab content sections */
+    .tab-content {
+        display: none;
+    }
 
-        .footer-column ul li a:hover {
-            color: #d4af37;
-        }
+    .tab-content.active {
+        display: block;
+    }
 
-        /* Tab content sections */
-        .tab-content {
-            display: none;
-        }
+    /* FAQ Styles - À AJOUTER dans le CSS */
+    .faq-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
 
-        .tab-content.active {
-            display: block;
-        }
+    .faq-category {
+        background: rgba(13, 63, 107, 0.3);
+        border-radius: 12px;
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
 
-        /* Flipbook layout styles */
-        .flipbook-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            min-height: 500px;
-        }
+    .faq-category-title {
+        background: rgba(212, 175, 55, 0.2);
+        padding: 20px 30px;
+        font-family: 'Cinzel', serif;
+        font-size: 1.4em;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
 
-        .flipbook-video {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(13, 63, 107, 0.3);
-            border-radius: 12px;
-            padding: 20px;
-        }
+    .faq-item {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        padding: 25px 30px;
+    }
 
-        .flipbook-video video {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+    .faq-item:last-child {
+        border-bottom: none;
+    }
 
-        .flipbook-text {
-            background: rgba(13, 63, 107, 0.3);
-            padding: 40px;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    .faq-question {
+        font-family: 'Cinzel', serif;
+        color: #d4af37;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
 
-        /* Legal content styles */
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(13, 63, 107, 0.3);
-            padding: 40px;
-            border-radius: 12px;
-            line-height: 1.8;
-        }
+    .faq-answer {
+        font-family: 'Playfair Display', serif;
+        color: #f5f5dc;
+        line-height: 1.8;
+        font-size: 1.05em;
+    }
 
-        .legal-content h3 {
-            color: #d4af37;
-            margin: 30px 0 15px 0;
-            font-family: 'Cinzel', serif;
-        }
+    .faq-answer a {
+        color: #d4af37;
+        text-decoration: none;
+    }
 
-        .legal-content h4 {
-            color: #d4af37;
-            margin: 20px 0 10px 0;
-        }
+    .faq-answer a:hover {
+        color: #f0d858;
+    }
 
-        .legal-content p {
-            margin-bottom: 15px;
-        }
+    /* Achat section styles - À AJOUTER */
+    .achat-section {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+    }
 
-        .legal-content ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
+    .achat-box {
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    }
 
-        /* Responsive */
-        @media (max-width: 991px) {
-            .main-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .right-column {
-                margin-top: 20px;
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    .cta-button {
+        background: linear-gradient(135deg, #f0d858, #d4af37);
+        color: #0d3f6b;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+    }
 
-            .flipbook-container {
-                grid-template-columns: 1fr;
-            }
+    .cta-button:hover {
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        transform: translateY(-2px);
+    }
 
-            .testimonial-item {
-                padding: 20px;
-            }
-
-            .testimonial-quote {
-                font-size: 1.1em;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .modal-content {
-                margin: 10% auto;
-                padding: 30px;
-            }
-        }
-
-        @media (max-width: 575px) {
-            .navigation {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonial-carousel {
-                height: 200px;
-            }
-
-            .testimonial-quote {
-                font-size: 1em;
-            }
-
-            .modal-content {
-                width: 95%;
-                padding: 20px;
-                margin: 15% auto;
-            }
-
-            .notification {
-                right: 10px;
-                left: 10px;
-                transform: translateY(-100px);
-            }
-
-            .notification.show {
-                transform: translateY(0);
-            }
-        }
     </style>
     <script defer data-domain="andrewmorrowdetective.com" src="https://plausible.io/js/script.outbound-links.js"></script>
 </head>
@@ -910,7 +950,7 @@
     <section id="zone-a">
         <nav class="navigation">
             <button class="nav-button active" data-tab="mysteres">Mystères</button>
-            <button class="nav-button" data-tab="flipbook">Flipbook</button>
+            <button class="nav-button" data-tab="flipbook">2-Faces</button>
             <button class="nav-button" data-tab="achat">Achat</button>
             <button class="nav-button" data-tab="auteur">Auteur</button>
             <button class="nav-button" data-tab="faq">FAQ</button>
@@ -947,7 +987,7 @@
                 <section id="zone-b2">
                     <h2>Les Mystères d'<span class="andrew-name">Andrew Morrow</span></h2>
                     <div class="mystery-description">
-                        Portrait d'un détective pas comme les autres, dont l'intuition légendaire et les méthodes discrètes font merveille sur la Côte d'Azur.
+                        Andrew Morrow est un détective malicieux qui enquête sur la Côte d'Azur, la "French Riviera". Chaque BD est inspirée de lieux réels de la côte d'Azur et mêle polar, mystère et clins d'œil cinématographiques.
                     </div>
                 </section>
                 
@@ -992,131 +1032,63 @@
         </div>
     </div>
 
-    <!-- Tab Content: Flipbook -->
+    <!-- Tab Content: 2-Faces -->
     <div id="flipbook" class="tab-content" data-tab-name="flipbook">
         <div style="padding: 50px 20px;">
-            <h2 style="font-family: 'Cinzel', serif; color: #d4af37; font-size: 2.5em; margin-bottom: 30px; text-align: center;">FLIPBOOK</h2>
-            
-            <div class="flipbook-container">
-                <!-- Partie gauche : Vidéo -->
-                <div class="flipbook-video">
-                    <video autoplay muted loop playsinline webkit-playsinline>
-                        <source src="https://andrewmorrowdetective.com/video/flipbook.mp4" type="video/mp4">
-                        Votre navigateur ne prend pas en charge cette vidéo.
-                    </video>
+            <div class="flipbook-text" style="width:100%; max-width:1200px; margin:0 auto; text-align:center; background: rgba(13, 63, 107, 0.3); border-radius: 18px; padding: 40px 36px 32px 36px;">
+              <h3 style="color: #d4af37; margin-bottom: 20px; font-size: 2.2em; font-family: 'Cinzel', serif; letter-spacing: 1px;">2-Faces</h3>
+              <p style="font-size: 1.35em; color: #fff; font-family: 'Playfair Display', serif; margin-bottom: 40px;">Cette bande dessinée révolutionnaire propose un concept unique</p>
+              <div style="display:flex; justify-content:center; margin-bottom:48px;">
+                <video style="max-width: 900px; width: 100%; border-radius: 18px; box-shadow: none; background: rgba(13, 63, 107, 0.3);" autoplay muted loop playsinline webkit-playsinline>
+                  <source src="mktg_recto-verso_25.mp4" type="video/mp4">
+                  Votre navigateur ne prend pas en charge cette vidéo.
+                </video>
+              </div>
+              <div style="background: rgba(13, 63, 107, 0.3); border-radius: 18px; padding: 40px 36px 32px 36px; margin-bottom: 38px; box-shadow: 0 4px 24px rgba(13,63,107,0.10); max-width: 900px; margin-left: auto; margin-right: auto; text-align:left;">
+                <p style="font-size: 1.18em; line-height: 2.1; color: #fff; font-family: 'Playfair Display', serif; margin-bottom: 18px;">
+                  D'un côté, une enquête policière racontée en images avec du texte en <span style='color:#d4af37; font-weight:bold;'>français</span>&nbsp;; de l'autre, la même histoire, mais en <span style='color:#d4af37; font-weight:bold;'>anglais</span>.<br><br>
+                  <span style='color:#d4af37; font-weight:bold;'>Ce qui rend cette BD vraiment spéciale</span>, c'est que même si le récit est identique, le fait de lire dans une autre langue transforme la perception de l'histoire. Une expérience à la fois <b>linguistique</b>, <b>visuelle</b> et <b>narrative</b>.<br><br>
+                  Vous parlez français&nbsp;? Vous parlez anglais&nbsp;? <span style='color:#d4af37; font-style:italic;'>Cette BD vous laissera sans voix... ou vous donnera envie de parler&nbsp;!</span><br><br>
+                  <span style='color:#d4af37;'>🔹 BD policière – version française au recto<br>🔹 BD policière – version anglaise au verso</span>
+                </p>
+                <p style="font-size: 1.12em; color: #f5f5dc; margin-bottom: 0; text-align: center; font-style: italic;">Parfait pour tout le monde à la plage cet été&nbsp;!</p>
+                <div style="margin-top: 36px;">
+                  <div style="font-size: 1.18em; line-height: 2.1; color: #f5f5dc; font-family: 'Playfair Display', serif; text-align: left; max-width: 520px; margin: 0 auto;">
+                    <div style="margin-bottom: 18px;">✨ <b>Intrigue policière et culturelle</b></div>
+                    <div style="margin-bottom: 18px;">📚 <b>Facile à lire</b></div>
+                    <div style="margin-bottom: 18px;">🎨 <b>Formule Transat</b></div>
+                    <div style="margin-bottom: 18px;">🎨 <b>Humour international</b></div>
+                    <div style="margin-bottom: 18px;">📚 <b>Qualité luxe premium</b></div>
+                    <div style="margin-bottom: 18px;">🎁 <b>Le cadeau pour soi (ou pour les autres)</b></div>
+                  </div>
                 </div>
-                
-                <!-- Partie droite : Texte existant -->
-                <div class="flipbook-text">
-                    <h3 style="color: #d4af37; margin-bottom: 20px; font-size: 1.8em;">Concept Innovant</h3>
-                    <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 20px;">
-                        Cette Bande Dessinée révolutionnaire présente un concept unique : d'un côté la super BD complète pour adultes, 
-                        de l'autre des pages à colorier pour prolonger l'expérience.
-                    </p>
-                    <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 20px;">
-                        Parfait pour les adultes et les enfants à la plage cet été !
-                    </p>
-                    <div style="margin-top: 30px;">
-                        <!-- <h4 style="color: #d4af37; margin-bottom: 15px;">Caractéristiques :</h4> -->
-                        <ul style="list-style: none; font-size: 1.1em; line-height: 2;">
-                            <li>✨ BD policière complète d'un côté</li>
-                            <li>&nbsp;📚 Facile à lire</li>
-                            <li>&nbsp;&nbsp;🎨 26 pages de coloriage de l'autre</li>
-                            <li>&nbsp;&nbsp;&nbsp;🎨 Super fun</li>
-                            <li>&nbsp;&nbsp;&nbsp;&nbsp;📚 Qualité luxe premium</li>
-                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📚 Format pratique</li>
-                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏖️ Idéal pour les vacances</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Ajout de la section Achat -->
-                <div class="achat-section">
-                    <!-- Édition Papier -->
-                    <div class="achat-box" style="background: rgba(5, 38, 68, 0.8); border: 2px solid #d4af37; padding: 30px; margin: 20px; width: 300px;">
-                        <h3>Édition Papier</h3>
-                        <button class="cta-button order-btn">Commander tout de suite</button>
-                        <p style="font-size: 2em; color: #d4af37;">12€</p>
-                        <p>BD complète + Coloriage</p>
-                        <p>Livraison rapide</p>
-                        <p>Paiement sécurisé</p>
-                        <p>via PayPal & Stripe</p>
-                    </div>
-
-                    <!-- Version Numérique -->
-                    <div class="achat-box" style="background: rgba(5, 38, 68, 0.8); border: 2px solid #d4af37; padding: 30px; margin: 20px; width: 300px;">
-                        <h3>Version Numérique</h3>
-                        <button class="cta-button order-btn">Télécharger tout de suite</button>
-                        <p style="font-size: 2em; color: #d4af37;">3€</p>
-                        <p>Téléchargement immédiat</p>
-                        <p>Compatible tablette & smartphone</p>
-                        <p>Paiement sécurisé via Amazon</p>
-                    </div>
-                </div>
-                <style>
-                    .achat-section {
-                        display: flex;
-                        justify-content: space-around;
-                        gap: 10px;
-                    }
-
-                    .achat-box {
-                        order: -1;
-                        text-align: center;
-                        border-radius: 8px;
-                        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-                    }
-
-                    .cta-button {
-                        background: linear-gradient(135deg, #f0d858, #d4af37);
-                        color: #0d3f6b;
-                        border: none;
-                        padding: 15px 40px;
-                        border-radius: 6px;
-                        font-weight: bold;
-                        cursor: pointer;
-                        font-size: 1.1em;
-                        transition: all 0.3s ease;
-                    }
-
-                    .cta-button:hover {
-                        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-                        transform: translateY(-2px);
-                    }
-
-
-                    /* Responsive design */
-                    @media (max-width: 992px) {
-                        .achat-section {
-                            flex-direction: column;
-                            align-items: center;
-                        }
-
-                        .achat-box {
-                            width: 100%;
-                            max-width: 400px;
-                        }
-                    }
-
-                    @media (max-width: 600px) {
-                        .cta-button {
-                            padding: 12px 24px;
-                            font-size: 1em;
-                        }
-
-                        .achat-box h3 {
-                            font-size: 1.5em;
-                        }
-
-                        .achat-box p {
-                            font-size: 1em;
-                        }
-                    }
-
-
-                </style>
-                    
+              </div>
             </div>
+
+            <!-- Ajout de la section Achat -->
+            <div class="achat-section">
+                <!-- Édition Papier -->
+                <div class="achat-box" style="background: rgba(13, 63, 107, 0.3); border: 2px solid #d4af37; padding: 30px; margin: 20px; width: 300px;">
+                    <h3>Édition Papier</h3>
+                    <button class="cta-button order-btn">Commander tout de suite</button>
+                    <p style="font-size: 2em; color: #d4af37;">14€</p>
+                    <p style="margin-bottom: 10px;">BD Français - Anglais "2-Faces"</p>
+                    <p>Livraison rapide</p>
+                    <p>Paiement sécurisé</p>
+                    <p>via PayPal & Stripe</p>
+                </div>
+
+                <!-- Version Numérique -->
+                <div class="achat-box" style="background: rgba(5, 38, 68, 0.8); border: 2px solid #d4af37; padding: 30px; margin: 20px; width: 300px;">
+                    <h3>Version Numérique</h3>
+                    <button class="cta-button order-btn">Télécharger tout de suite</button>
+                    <p style="font-size: 2em; color: #d4af37;">3€</p>
+                    <p>Téléchargement immédiat</p>
+                    <p>Compatible tablette & smartphone</p>
+                    <p>Paiement sécurisé via Amazon</p>
+                </div>
+            </div>
+                
         </div>
     </div>
 
@@ -1145,8 +1117,8 @@
                 
                 <div style="background: rgba(13, 63, 107, 0.3); padding: 30px; border-radius: 12px; border: 2px solid #d4af37;">
                     <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.5em;">Édition Papier</h3>
-                    <p style="font-size: 2em; color: #d4af37; margin: 20px 0;">12€</p>
-                    <p style="margin-bottom: 10px;">BD + Coloriage Flipbook</p>
+                    <p style="font-size: 2em; color: #d4af37; margin: 20px 0;">14€</p>
+                    <p style="margin-bottom: 10px;">BD Français - Anglais "2-Faces"</p>
                     <p style="font-size: 0.9em; color: #f5f5dc; margin-bottom: 20px;">+ Frais de port : 2,50€</p>
                     <button class="order-btn" style="background: #d4af37; color: #0d3f6b; border: none; padding: 15px 30px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1em;">Commander</button>
                 </div>
@@ -1156,13 +1128,6 @@
                     <p style="font-size: 2em; color: #d4af37; margin: 20px 0;">3€</p>
                     <p style="margin-bottom: 20px;">Téléchargement immédiat</p>
                     <button style="background: #d4af37; color: #0d3f6b; border: none; padding: 15px 30px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1em;">Télécharger</button>
-                </div>
-                
-                <div style="background: rgba(13, 63, 107, 0.3); padding: 30px; border-radius: 12px; border: 2px solid #d4af37;">
-                    <h3 style="color: #d4af37; margin-bottom: 15px; font-size: 1.5em;">Coloriage Seul</h3>
-                    <p style="font-size: 2em; color: #d4af37; margin: 20px 0;">Offert</p>
-                    <p style="margin-bottom: 20px;">Avec toute commande</p>
-                    <button style="background: #d4af37; color: #0d3f6b; border: none; padding: 15px 30px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1em;">Recevoir</button>
                 </div>
             </div>
         </div>
@@ -1217,7 +1182,7 @@
                     
                     <div class="faq-item">
                         <div class="faq-question">🟢 Qui est Andrew Morrow ?</div>
-                        <div class="faq-answer">Andrew Morrow est un détective fictif qui enquête sur la Côte d'Azur. Chaque BD est inspirée de lieux réels de la côte d'Azur et mêle polar, mystère et clins d'œil cinématographiques.</div>
+                        <div class="faq-answer">Andrew Morrow est un détective malicieux qui enquête sur la Côte d'Azur, la "French Riviera". Chaque BD est inspirée de lieux réels de la côte d'Azur et mêle polar, mystère et clins d'œil cinématographiques.</div>
                     </div>
                     
                     <div class="faq-item">
@@ -1231,18 +1196,13 @@
                     <div class="faq-category-title">Format & Contenu</div>
                     
                     <div class="faq-item">
-                        <div class="faq-question">🟡 C'est quoi un flipbook BD ?</div>
-                        <div class="faq-answer">Un format unique : d'un côté une bande dessinée, de l'autre un cahier de coloriage reprenant certaines scènes. Idéal pour petits et grands, pour lire ou pour s'approprier l'histoire avec des crayons !</div>
+                        <div class="faq-question">🟡 C'est quoi un 2-Faces BD ?</div>
+                        <div class="faq-answer">Un format unique : d'un côté une bande dessinée en français et "on la retourne"... et hop, on passe en anglais. Cool..!</div>
                     </div>
                     
                     <div class="faq-item">
-                        <div class="faq-question">🟡 À partir de quel âge peut-on lire / colorier ce livre ?</div>
-                        <div class="faq-answer">Le côté BD est accessible dès 8 ans. Le coloriage plaît autant aux enfants qu'aux adultes amateurs d'art ou de détente créative.</div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">🟡 L'impression est-elle de qualité ?</div>
-                        <div class="faq-answer">Oui. Papier épais 130g, reliure dos carré collé, couverture mate. Fabriqué en France en petite série.</div>
+                        <div class="faq-question">🟡 Qui peut être interessé par ce concept ?</div>
+                        <div class="faq-answer">Ceux qui veulent une BD bilingue. L'anglais, le français, - en même temps - c'est pas tendance ? et puis, on se fait un cours de français ou d'anglais facile, pour les plus petits comme pour les séniors.</div>
                     </div>
                 </div>
 
@@ -1566,7 +1526,7 @@
                 <h3>Navigation</h3>
                 <ul>
                     <li><a href="#" data-tab="mysteres">Mystères</a></li>
-                    <li><a href="#" data-tab="flipbook">Flipbook</a></li>
+                    <li><a href="#" data-tab="flipbook">2-Faces</a></li>
                     <li><a href="#" data-tab="achat">Achat</a></li>
                     <li><a href="#" data-tab="auteur">Auteur</a></li>
                     <li><a href="#" data-tab="faq">FAQ</a></li>
@@ -2106,37 +2066,37 @@
 
         // Carousel data
         const c1Items = [
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P1.jpeg', comment: 'La Côte d\'Azur fascine, mais elle ne supporte pas la lumière' },
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P2.jpg', comment: 'Des testaments verrouillés, des successions contestées' },
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P3.jpg', comment: 'Les scandales sont recouverts de silence doré' },
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P4.jpg', comment: 'Certains noms ont leurs secrets et des moyens pour les garder' },
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P5.jpg', comment: 'Andrew Morrow voit ce que personne ne regarde' }
+            { type: 'image', url: 'images/1M1.png', comment: 'La Côte d\'Azur fascine, mais elle ne supporte pas la lumière' },
+            { type: 'image', url: 'images/2M1.png', comment: 'Des testaments verrouillés, des successions contestées' },
+            { type: 'image', url: 'images/3M1.png', comment: 'Les scandales sont recouverts de silence doré' },
+            { type: 'image', url: 'images/4M1.png', comment: 'Certains noms ont leurs secrets et des moyens pour les garder' },
+            { type: 'image', url: 'images/andrew et son tel.png', comment: 'Andrew Morrow voit ce que personne ne regarde' }
         ];
 
         const c2Items = [
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V1.mp4',
+                url: '',
                 comment: 'Il parle peu. Il voit tout.'
             },
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V2.mp4',
+                url: 'M2V2.mp4',
                 comment: 'Il intervient quand la police ne peut pas. Ou ne doit pas.'
             },
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V3.mp4',
+                url: 'M2V3.mp4',
                 comment: 'Rien n\'est certain. Mais tout le monde sait qu\'il n\'échoue jamais.'
             },
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V4.mp4',
+                url: 'M2V4.mp4',
                 comment: 'Il ne cherche pas la vérité. Il cherche ce que vous n\'osez pas dire.'
             },
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V5.mp4',
+                url: 'M2V5.mp4',
                 comment: 'Il est efficace et rapide.'
             }
         ];
@@ -2144,27 +2104,27 @@
         const c3Items = [
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P1.jpg',
+                url: 'images/M3P1.jpeg',
                 comment: 'Ce n\'est qu\'au premier regard que tout semble idyllique sur le tapis rouge du Palais des Festivals.'
             },
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P2.jpg',
+                url: 'images/M3P2.jpeg',
                 comment: 'Majestueusement, il garde le secret des talons noirs…'
             },
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P3.jpg',
+                url: 'images/M3P3.jpeg',
                 comment: '…et de cette silhouette évanescente, surgie une nuit de silence sur le tapis rouge désert…'
             },
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P4.jpg',
+                url: 'images/M3P4.jpeg',
                 comment: 'Avec la Palme d\'or… … … disparue !'
             },
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P5.jpg',
+                url: 'images/M3P5.jpeg',
                 comment: 'Andrew Morrow est déjà en route pour la retrouver… et éviter un scandale.'
             }
         ];
@@ -2218,7 +2178,7 @@
 
     if (isWebView()) {
         if (confirm("Pour profiter pleinement de l'univers Andrew Morrow, veuillez ouvrir ce lien dans un vrai navigateur.")) {
-            window.location.href = "https://andrewmorrowdetective.com/?from=app";
+            window.location.href = "./?from=app";
         }
     }
     </script>
