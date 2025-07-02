@@ -1,0 +1,469 @@
+/* ===== STRUCTURE DE BASE DU SITE (ex-<style> HTML) ===== */
+
+/* (Tout le CSS de layout, grid, responsive, boutons, carrousels, modals, FAQ, footer, etc. issu du <style> supprimé du head de index_local2.html, à fusionner ici AVANT les règles premium déjà présentes) */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+
+:root {
+    --blue-night: #0d3f6b;
+    --blue-night2: rgba(13, 63, 107, 0.3);
+    --gold: #c7b377;
+    --gold-border: #bfa14a;
+    --white: #f8f8f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--blue-night);
+    color: var(--white);
+    font-family: 'Cinzel', serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 28px 0 20px 0;
+    background: var(--blue-night2);
+    border-bottom: 1.5px solid var(--gold);
+    box-shadow: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-button {
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 26px;
+    border-radius: 6px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    box-shadow: none;
+}
+
+.nav-button:hover, .nav-button.active {
+    background: var(--gold);
+    color: var(--blue-night);
+    border-color: var(--gold);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: calc(100vh - 120px);
+    gap: 32px;
+    padding: 40px 32px 32px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column, .right-column {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+#zone-b1, #zone-b2, #zone-b3, #zone-d {
+    text-align: center;
+    padding: 32px 18px 24px 18px;
+    background: var(--blue-night2);
+    border-radius: 8px;
+    margin: 24px 0 16px 0;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#zone-b1 h2, #zone-b2 h2, #zone-b3 h2, #zone-d h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
+    color: var(--gold);
+    background: none;
+    text-shadow: none;
+}
+
+.mystery-description {
+    color: var(--white);
+    font-size: 1.08em;
+    font-style: italic;
+    text-shadow: none;
+}
+
+#zone-c1, #zone-c2, #zone-c3 {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+    border: 2px solid var(--gold-border);
+    background: var(--blue-night2);
+    margin: 32px 0;
+    width: 100%;
+    height: 540px;
+    max-width: 100%;
+}
+
+#zone-c1 video, #zone-c2 img, #zone-c3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tab-content {
+    display: none;
+    padding: 40px 18px;
+    min-height: 400px;
+    background: var(--blue-night2);
+    border-radius: 8px;
+    border: 1.5px solid var(--gold);
+    box-shadow: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeInPremium 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeInPremium {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 24px;
+    color: var(--gold);
+    background: none;
+    text-shadow: none;
+}
+
+.order-btn {
+    background: var(--gold);
+    color: var(--blue-night);
+    border: none;
+    padding: 14px 36px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.order-btn:hover {
+    background: var(--blue-night);
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        gap: 8px;
+    }
+    #zone-c1, #zone-c2, #zone-c3 {
+        height: 340px;
+        margin: 18px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        padding: 2px;
+    }
+    .tab-content {
+        padding: 8px 2px;
+    }
+    .order-btn {
+        padding: 8px 6px;
+        font-size: 0.95em;
+    }
+    #zone-c1, #zone-c2, #zone-c3 {
+        height: 180px;
+    }
+}
+
+/* Forcer Cinzel partout, sauf .andrew-name (Creepster) */
+body, p, h1, h2, h3, h4, h5, h6, li, ul, ol, input, textarea, select, button, label, blockquote, .faq-answer, .testimonial-quote, .achat-testimonial-quote, .comment-zone p, .legal-content p, .footer-column ul li, .main-container, .tab-content, .order-form, .modal-content, .notification {
+    font-family: 'Cinzel', serif !important;
+    font-variant-ligatures: common-ligatures;
+}
+
+/* Sauf Creepster pour le nom Andrew */
+.andrew-name {
+    font-family: 'Creepster', cursive !important;
+}
+
+/* ===== THÈME PREMIUM - LUXE DISCRET BLEU NUIT & OR MAT ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+
+:root {
+    --blue-night: #0d3f6b;
+    --blue-night2: rgba(13, 63, 107, 0.3);
+    --gold: #c7b377;
+    --gold-border: #bfa14a;
+    --white: #f8f8f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--blue-night);
+    color: var(--white);
+    font-family: 'Cinzel', serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 28px 0 20px 0;
+    background: var(--blue-night2);
+    border-bottom: 1.5px solid var(--gold);
+    box-shadow: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-button {
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 26px;
+    border-radius: 6px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    box-shadow: none;
+}
+
+.nav-button:hover, .nav-button.active {
+    background: var(--gold);
+    color: var(--blue-night);
+    border-color: var(--gold);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: calc(100vh - 120px);
+    gap: 32px;
+    padding: 40px 32px 32px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column, .right-column {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+#zone-b1, #zone-b2, #zone-b3, #zone-d {
+    text-align: center;
+    padding: 32px 18px 24px 18px;
+    background: var(--blue-night2);
+    border-radius: 8px;
+    margin: 24px 0 16px 0;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#zone-b1 h2, #zone-b2 h2, #zone-b3 h2, #zone-d h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
+    color: var(--gold);
+    background: none;
+    text-shadow: none;
+}
+
+.mystery-description {
+    color: var(--white);
+    font-size: 1.08em;
+    font-style: italic;
+    text-shadow: none;
+}
+
+#zone-c1, #zone-c2, #zone-c3 {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+    border: 2px solid var(--gold-border);
+    background: var(--blue-night2);
+    margin: 32px 0;
+    width: 100%;
+    height: 540px;
+    max-width: 100%;
+}
+
+#zone-c1 video, #zone-c2 img, #zone-c3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tab-content {
+    display: none;
+    padding: 40px 18px;
+    min-height: 400px;
+    background: var(--blue-night2);
+    border-radius: 8px;
+    border: 1.5px solid var(--gold);
+    box-shadow: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeInPremium 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeInPremium {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 24px;
+    color: var(--gold);
+    background: none;
+    text-shadow: none;
+}
+
+.order-btn {
+    background: var(--gold);
+    color: var(--blue-night);
+    border: none;
+    padding: 14px 36px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.order-btn:hover {
+    background: var(--blue-night);
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        gap: 8px;
+    }
+    #zone-c1, #zone-c2, #zone-c3 {
+        height: 340px;
+        margin: 18px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        padding: 2px;
+    }
+    .tab-content {
+        padding: 8px 2px;
+    }
+    .order-btn {
+        padding: 8px 6px;
+        font-size: 0.95em;
+    }
+    #zone-c1, #zone-c2, #zone-c3 {
+        height: 180px;
+    }
+}
+
+/* Forcer Cinzel partout, sauf .andrew-name (Creepster) */
+body, p, h1, h2, h3, h4, h5, h6, li, ul, ol, input, textarea, select, button, label, blockquote, .faq-answer, .testimonial-quote, .achat-testimonial-quote, .comment-zone p, .legal-content p, .footer-column ul li, .main-container, .tab-content, .order-form, .modal-content, .notification {
+    font-family: 'Cinzel', serif !important;
+    font-variant-ligatures: common-ligatures;
+}
+
+/* Sauf Creepster pour le nom Andrew */
+.andrew-name {
+    font-family: 'Creepster', cursive !important;
+} 

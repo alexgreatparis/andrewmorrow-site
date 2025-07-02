@@ -1,0 +1,229 @@
+/* ===== THÈME MINIMAL ===== */
+/* Style épuré et moderne */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    color: #333333;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Navigation minimal */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-button {
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    color: #666666;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-button:hover, .nav-button.active {
+    background: #f8f9fa;
+    color: #333333;
+    border-color: #333333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneurs principaux */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: calc(100vh - 120px);
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Colonnes */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 20px;
+}
+
+/* Zones de contenu minimal */
+#zone-b1, #zone-b2, #zone-b3, #zone-d {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#zone-b1 h2, #zone-b2 h2, #zone-b3 h2, #zone-d h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Zones vidéo/images minimal */
+#zone-c1, #zone-c2, #zone-c3 {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
+}
+
+#zone-c2, #zone-c3 {
+    height: 350px;
+}
+
+/* Contenu des onglets minimal */
+.tab-content {
+    display: none;
+    padding: 40px 30px;
+    min-height: 500px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeInMinimal 0.4s ease-out;
+}
+
+@keyframes fadeInMinimal {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titres des onglets minimal */
+.tab-content h2 {
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Boutons de commande minimal */
+.order-btn {
+    background: #333333;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.order-btn:hover {
+    background: #555555;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Sélecteur de thème minimal */
+.theme-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.theme-btn {
+    background: #f8f9fa;
+    border: 1px solid #e5e5e5;
+    color: #666666;
+    padding: 6px 12px;
+    margin: 0 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover, .theme-btn.active {
+    background: #333333;
+    color: #ffffff;
+    border-color: #333333;
+}
+
+/* Responsive minimal */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .navigation {
+        gap: 15px;
+        padding: 15px 0;
+    }
+    
+    .nav-button {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+    
+    .theme-selector {
+        top: 10px;
+        right: 10px;
+    }
+} 

@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO Meta Tags -->
     <title>Andrew Morrow Detective - BD Mystère Côte d'Azur | Vol de la Palme d'Or</title>
@@ -14,7 +14,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Andrew Morrow Detective - Mystères de la Côte d'Azur">
     <meta property="og:description" content="Plongez dans l'univers du détective Andrew Morrow et ses enquêtes sur la Côte d'Azur">
-    <meta property="og:image" content="https://andrewmorrowdetective.com/image/M1P1.jpeg">
+    <meta property="og:image" content="images/M1P1.jpeg">
     <meta property="og:url" content="https://andrewmorrowdetective.com">
     <meta property="og:type" content="website">
     
@@ -903,6 +903,7 @@
             }
         }
     </style>
+    <script defer data-domain="andrewmorrowdetective.com" src="https://plausible.io/js/script.outbound-links.js"></script>
 </head>
 <body>
     <!-- Zone A - Navigation -->
@@ -1000,7 +1001,7 @@
                 <!-- Partie gauche : Vidéo -->
                 <div class="flipbook-video">
                     <video autoplay muted loop playsinline webkit-playsinline>
-                        <source src="https://andrewmorrowdetective.com/video/flipbook.mp4" type="video/mp4">
+                        <source src="videos/flipbook.mp4" type="video/mp4">
                         Votre navigateur ne prend pas en charge cette vidéo.
                     </video>
                 </div>
@@ -1030,28 +1031,102 @@
                 </div>
 
                 <!-- Ajout de la section Achat -->
-                <div class="achat-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto;">
+                <div class="achat-section">
                     <!-- Édition Papier -->
-                    <div class="achat-box" style="background: rgba(13, 63, 107, 0.8); border: 2px solid #d4af37; padding: 30px; margin: 20px;">
+                    <div class="achat-box" style="background: rgba(5, 38, 68, 0.8); border: 2px solid #d4af37; padding: 30px; margin: 20px; width: 300px;">
                         <h3>Édition Papier</h3>
+                        <button class="cta-button order-btn">Commander tout de suite</button>
                         <p style="font-size: 2em; color: #d4af37;">12€</p>
-                        <p>BD + Coloriage Flipbook</p>
-                        <p>+ Frais de port : 2,50€</p>
-                        <button class="order-btn" style="background: #d4af37; color: #0d3f6b; border: none; padding: 15px 30px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1em;">Commander</button>
+                        <p>BD complète + Coloriage</p>
+                        <p>Livraison rapide</p>
+                        <p>Paiement sécurisé</p>
+                        <p>via PayPal & Stripe</p>
                     </div>
 
                     <!-- Version Numérique -->
-                    <div class="achat-box" style="background: rgba(13, 63, 107, 0.8); border: 2px solid #d4af37; padding: 30px; margin: 20px;">
+                    <div class="achat-box" style="background: rgba(5, 38, 68, 0.8); border: 2px solid #d4af37; padding: 30px; margin: 20px; width: 300px;">
                         <h3>Version Numérique</h3>
+                        <button class="cta-button order-btn">Télécharger tout de suite</button>
                         <p style="font-size: 2em; color: #d4af37;">3€</p>
                         <p>Téléchargement immédiat</p>
-                        <button class="download-btn" style="background: #d4af37; color: #0d3f6b; border: none; padding: 15px 30px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1em;">Télécharger</button>
+                        <p>Compatible tablette & smartphone</p>
+                        <p>Paiement sécurisé via Amazon</p>
                     </div>
-
                 </div>
+                <style>
+                    .achat-section {
+                        display: flex;
+                        justify-content: space-around;
+                        gap: 10px;
+                    }
+
+                    .achat-box {
+                        order: -1;
+                        text-align: center;
+                        border-radius: 8px;
+                        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+                    }
+
+                    .cta-button {
+                        background: linear-gradient(135deg, #f0d858, #d4af37);
+                        color: #0d3f6b;
+                        border: none;
+                        padding: 15px 40px;
+                        border-radius: 6px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        font-size: 1.1em;
+                        transition: all 0.3s ease;
+                    }
+
+                    .cta-button:hover {
+                        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+                        transform: translateY(-2px);
+                    }
+
+
+                    /* Responsive design */
+                    @media (max-width: 992px) {
+                        .achat-section {
+                            flex-direction: column;
+                            align-items: center;
+                        }
+
+                        .achat-box {
+                            width: 100%;
+                            max-width: 400px;
+                        }
+                    }
+
+                    @media (max-width: 600px) {
+                        .cta-button {
+                            padding: 12px 24px;
+                            font-size: 1em;
+                        }
+
+                        .achat-box h3 {
+                            font-size: 1.5em;
+                        }
+
+                        .achat-box p {
+                            font-size: 1em;
+                        }
+                    }
+
+
+                </style>
+                    
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
 
     <!-- Tab Content: Achat -->
     <div id="achat-content" class="tab-content">
@@ -1782,13 +1857,6 @@
                 location: "Paris 5e"
             },
             {
-                name: "Michael",
-                age: 35,
-                location: "Paris",
-                quote: "Une vraie pépite cette BD. Super idée le format double face BD avec l'anglais. Mes gamines ont adoré.",
-                avatar: "👨‍💼"
-            },
-            {
                 name: "Brigitte",
                 age: 76,
                 location: "Cannes",
@@ -2047,37 +2115,37 @@
 
         // Carousel data
         const c1Items = [
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P1.jpeg', comment: 'La Côte d\'Azur fascine, mais elle ne supporte pas la lumière' },
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P2.jpg', comment: 'Des testaments verrouillés, des successions contestées' },
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P3.jpg', comment: 'Les scandales sont recouverts de silence doré' },
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P4.jpg', comment: 'Certains noms ont leurs secrets et des moyens pour les garder' },
-            { type: 'image', url: 'https://andrewmorrowdetective.com/image/M1P5.jpg', comment: 'Andrew Morrow voit ce que personne ne regarde' }
+            { type: 'image', url: 'images/M1P1.jpeg', comment: 'La Côte d\'Azur fascine, mais elle ne supporte pas la lumière' },
+            { type: 'image', url: 'images/M1P2.jpg', comment: 'Des testaments verrouillés, des successions contestées' },
+            { type: 'image', url: 'images/M1P3.jpg', comment: 'Les scandales sont recouverts de silence doré' },
+            { type: 'image', url: 'images/M1P4.jpg', comment: 'Certains noms ont leurs secrets et des moyens pour les garder' },
+            { type: 'image', url: 'images/M1P5.jpg', comment: 'Andrew Morrow voit ce que personne ne regarde' }
         ];
 
         const c2Items = [
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V1.mp4',
+                url: 'videos/M2V1.mp4',
                 comment: 'Il parle peu. Il voit tout.'
             },
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V2.mp4',
+                url: 'videos/M2V2.mp4',
                 comment: 'Il intervient quand la police ne peut pas. Ou ne doit pas.'
             },
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V3.mp4',
+                url: 'videos/M2V3.mp4',
                 comment: 'Rien n\'est certain. Mais tout le monde sait qu\'il n\'échoue jamais.'
             },
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V4.mp4',
+                url: 'videos/M2V4.mp4',
                 comment: 'Il ne cherche pas la vérité. Il cherche ce que vous n\'osez pas dire.'
             },
             { 
                 type: 'video', 
-                url: 'https://andrewmorrowdetective.com/video/M2V5.mp4',
+                url: 'videos/M2V5.mp4',
                 comment: 'Il est efficace et rapide.'
             }
         ];
@@ -2085,27 +2153,27 @@
         const c3Items = [
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P1.jpg',
+                url: 'images/M3P1.jpg',
                 comment: 'Ce n\'est qu\'au premier regard que tout semble idyllique sur le tapis rouge du Palais des Festivals.'
             },
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P2.jpg',
+                url: 'images/M3P2.jpg',
                 comment: 'Majestueusement, il garde le secret des talons noirs…'
             },
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P3.jpg',
+                url: 'images/M3P3.jpg',
                 comment: '…et de cette silhouette évanescente, surgie une nuit de silence sur le tapis rouge désert…'
             },
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P4.jpg',
+                url: 'images/M3P4.jpg',
                 comment: 'Avec la Palme d\'or… … … disparue !'
             },
             { 
                 type: 'image', 
-                url: 'https://andrewmorrowdetective.com/image/M3P5.jpg',
+                url: 'images/M3P5.jpg',
                 comment: 'Andrew Morrow est déjà en route pour la retrouver… et éviter un scandale.'
             }
         ];
@@ -2151,6 +2219,18 @@
     }
     </script>
 
+    <script>
+    function isWebView() {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        return /FBAN|FBAV|Instagram/.test(ua);
+    }
+
+    if (isWebView()) {
+        if (confirm("Pour profiter pleinement de l'univers Andrew Morrow, veuillez ouvrir ce lien dans un vrai navigateur.")) {
+            window.location.href = "./?from=app";
+        }
+    }
+    </script>
 
 
 
